@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Tiny API mocking microservice, using jaymock.",
   "main": "index.ts",
-  "scripts": {
-    "start": "micro"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/unmock/jaymock-microservice.git"
