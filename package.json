@@ -1,0 +1,19 @@
+{
+  "name": "@unmock/jaymock-microservice",
+  "version": "1.0.0",
+  "description": "Tiny API mocking microservice, using jaymock.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unmock/jaymock-microservice.git"
+  },
+  "author": "unmock",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unmock/jaymock-microservice/issues"
+  },
+  "homepage": "https://github.com/unmock/jaymock-microservice#readme"
+}
