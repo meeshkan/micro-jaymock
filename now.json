@@ -1,7 +1,6 @@
 {
     "version": 2,
     "name": "jaymock",
-    "alias": "jaymock",
     "builds": [
         { "src": "index.js", "use": "@now/node" }
     ],
