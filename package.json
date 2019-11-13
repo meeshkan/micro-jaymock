@@ -2,7 +2,7 @@
   "name": "@unmock/micro-jaymock",
   "version": "1.0.0",
   "description": "Tiny API mocking microservice, using jaymock.",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "start": "micro"
   },
