@@ -2,9 +2,9 @@
     "version": 2,
     "name": "jaymock",
     "builds": [
-        { "src": "index.js", "use": "@now/node" }
-    ],
-    "routes": [
-        { "src": "/.*", "dest": "/index.js" }
+        {
+            "src": "index.ts",
+            "use": "@now/node@canary"
+        }
     ]
 }
