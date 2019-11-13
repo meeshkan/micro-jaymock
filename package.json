@@ -4,6 +4,7 @@
   "description": "Tiny API mocking microservice, using jaymock.",
   "main": "index.js",
   "scripts": {
+    "start": "micro",
     "test": "ava"
   },
   "repository": {
