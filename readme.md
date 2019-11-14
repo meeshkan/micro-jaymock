@@ -4,8 +4,7 @@
 
 ## Usage
 
-- Send a `POST` request to [`https://jaymock.now.sh/`](https://jaymock.now.sh) with your JSON template as your request's `body`.
-- 
+- Send a `POST` request to [`https://jaymock.now.sh/`](https://jaymock.now.sh) with your JSON template (see [`jaymock.populate`'s `template` parameter](https://github.com/unmock/jaymock#populatetemplate)) as your request's `body`.
 
 ### Examples
 
