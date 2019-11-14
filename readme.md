@@ -73,6 +73,10 @@ Then, run `now` from *within* the `micro-jaymock` directory:
 ~/micro-jaymock ❯❯❯ now
 ```
 
+## Related
+
+- [jaymock](https://github.com/unmock/jaymock) - API for this module
+
 ## License
 
 MIT © [Meeshkan](http://meeshkan.com/)
