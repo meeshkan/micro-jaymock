@@ -1,6 +1,6 @@
 # micro-jaymock
 
-> Tiny API mocking microservice, using jaymock.
+> Tiny API mocking microservice, using [jaymock](https://github.com/unmock/jaymock).
 
 ## Usage
 
