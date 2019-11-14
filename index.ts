@@ -3,12 +3,13 @@ const { json, send } = require('micro')
 const jaymock = require('@unmock/jaymock')
 const chance = require('chance')
 const serveMarked = require('serve-marked')
-const fs = require('fs')
+const { join } = require('path')
+const { readFileSync } = require('fs')
 
 const jm = jaymock()
 jm.extend('chance', new chance())
 
-const serveReadme = serveMarked(fs.readFileSync('./README.md', 'utf8'), {
+const serveReadme = serveMarked(readFileSync(join(__dirname, 'readme.md')).toString('utf8'), {
     title: 'jaymock',
     inlineCSS: `
         .markdown-body h1 + p {
