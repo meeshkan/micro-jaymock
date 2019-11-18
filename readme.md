@@ -84,6 +84,12 @@ and ask for more features and support.
 
 Please note that this project is governed by the [Unmock Community Code of Conduct](https://github.com/unmock/code-of-conduct). By participating in this project, you agree to abide by its terms.
 
+## Credits
+
+- [`Faker.js`](https://github.com/Marak/Faker.js) is used as [`jaymock`](https://github.com/unmock/jaymock)'s core fake data generator.
+- [`chance`](https://github.com/chancejs/chancejs) is imported as a fake data generator dependency in `micro-jaymock` (using [`jaymock.extend`](https://github.com/unmock/jaymock#extendname-body)).
+- [`micro`](https://github.com/zeit/micro) is used to serve this HTTP microservice.
+
 ## License
 
 MIT © [Meeshkan](http://meeshkan.com/)
