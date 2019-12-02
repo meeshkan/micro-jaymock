@@ -2,6 +2,8 @@
 
 > Tiny API mocking microservice, using [jaymock](https://github.com/unmock/jaymock).
 
+<img src="demo.gif" width="500">
+
 ## Usage
 
 - Send a `POST` request to [`https://jaymock.now.sh/`](https://jaymock.now.sh) with your JSON template (see [`jaymock.populate`'s `template` parameter](https://github.com/unmock/jaymock#populatetemplate)) as your request's `body`.
