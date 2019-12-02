@@ -67,6 +67,46 @@ request.post({url: 'https://jaymock.now.sh', json: template}, (error, response, 
 })
 ```
 
+#### Using [`got`](https://github.com/sindresorhus/got) (Node.js):
+```js
+const got = require('got');
+const template = {
+    name: 'fake({{name.lastName}}, {{name.firstName}} {{name.suffix}})',
+    ssn: 'chance.ssn',
+    knownAddresses: {
+        street: 'address.streetAddress',
+        city: 'address.city',
+        zipCode: 'address.zipCode',
+        _repeat: 2
+    }
+};
+(async () => {
+	const {body} = await got.post('https://jaymock.now.sh', {
+		json: template,
+		responseType: 'json'
+	});
+	console.log(body);
+    /*
+        {
+            name: 'Goodwin, Libby II',
+            ssn: '368-52-3834',
+            knownAddresses: [
+                {
+                    street: '42483 Citlalli Viaduct',
+                    city: 'West Joeybury',
+                    zipCode: '43966-8850'
+                },
+                {
+                    street: '36297 Estella Throughway',
+                    city: 'South Claudie',
+                    zipCode: '39189-1653'
+                }
+            ]
+        }
+    */
+})();
+```
+
 ## Development
 
 First, clone the repository and install its dependencies:
