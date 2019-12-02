@@ -81,11 +81,11 @@ const template = {
     }
 };
 (async () => {
-	const {body} = await got.post('https://jaymock.now.sh', {
-		json: template,
-		responseType: 'json'
-	});
-	console.log(body);
+    const {body} = await got.post('https://jaymock.now.sh', {
+        json: template,
+        responseType: 'json'
+    });
+    console.log(body);
     /*
         {
             name: 'Goodwin, Libby II',
