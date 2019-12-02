@@ -2,6 +2,10 @@
     "version": 2,
     "name": "jaymock",
     "builds": [
+        { 
+            "src": "*.gif", 
+            "use": "@now/static" 
+        },
         {
             "src": "index.ts",
             "use": "@now/node@canary"
