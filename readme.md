@@ -107,7 +107,7 @@ const template = {
 })();
 ```
 
-#### Using [`requests`](https://github.com/psf/requests) (Python 3)
+#### Using [`requests`](https://github.com/psf/requests) (Python 3):
 ```py
 import requests, json
 template = {
