@@ -36,6 +36,6 @@ module.exports = async (req: IncomingMessage, res: ServerResponse) => {
         send(res, 200, jm.populate(await json(req)))
     } catch (e) {
         console.error(e.message)
-        return send(res, 400, e.message)
+        return send(res, 400, {error: e.message})
     }
 }
