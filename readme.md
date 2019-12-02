@@ -1,6 +1,6 @@
 # micro-jaymock
 
-> Tiny API mocking microservice, using [jaymock](https://github.com/unmock/jaymock).
+> Tiny API mocking microservice for generating fake JSON data.
 
 <img src="demo.gif" width="800">
 
