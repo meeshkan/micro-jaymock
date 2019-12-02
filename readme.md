@@ -10,7 +10,7 @@
 
 ### Examples
 
-#### Using curl:
+#### Using `curl`:
 
 ```
 ~ ❯❯❯ curl -X POST \
@@ -19,7 +19,7 @@
 {"firstName":"Isaac","lastName":"Schultz"}
 ```
 
-#### Using [httpie](https://github.com/jakubroztocil/httpie):
+#### Using [`httpie`](https://github.com/jakubroztocil/httpie):
 ```
 ~ ❯❯❯ http -b POST https://jaymock.now.sh \
         firstName=name.firstName lastName=name.lastName ssn=chance.ssn \
@@ -43,7 +43,7 @@
 ]
 ```
 
-#### Using [request](https://github.com/request/request) (Node.js):
+#### Using [`request`](https://github.com/request/request) (Node.js):
 ```js
 const request = require('request')
 const template = {
