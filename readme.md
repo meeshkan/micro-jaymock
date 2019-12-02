@@ -2,7 +2,7 @@
 
 > Tiny API mocking microservice, using [jaymock](https://github.com/unmock/jaymock).
 
-<img src="demo.gif" width="500">
+<img src="demo.gif" width="800">
 
 ## Usage
 
