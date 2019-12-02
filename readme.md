@@ -107,6 +107,44 @@ const template = {
 })();
 ```
 
+#### Using [`requests`](https://github.com/psf/requests) (Python 3)
+```py
+import requests, json
+template = {
+	"accounts": {
+		"name": "finance.accountName",
+		"iban": "finance.iban",
+		"bic": "finance.bic",
+		"currentBalance": "finance.amount",
+		"currency": "finance.currencyName",
+		"_repeat": 2
+	}
+}
+r = requests.post('https://jaymock.now.sh', data = json.dumps(template))
+parsedFakeData = json.loads(r.text) # parse for pretty-printing
+print(json.dumps(parsedFakeData, indent=4, sort_keys=True))
+"""
+	{
+		"accounts": [
+			{
+				"bic": "WNRUMKJ1",
+				"currency": "Turkish Lira",
+				"currentBalance": "37.49",
+				"iban": "CY70805008804937709053145O66",
+				"name": "Credit Card Account"
+			},
+			{
+				"bic": "LTJUMXQ1",
+				"currency": "Somoni",
+				"currentBalance": "98.10",
+				"iban": "FI1000486540190178",
+				"name": "Home Loan Account"
+			}
+		]
+	}
+"""
+```
+
 ## Development
 
 First, clone the repository and install its dependencies:
