@@ -43,6 +43,30 @@
 ]
 ```
 
+#### Using [request](https://github.com/request/request) (Node.js)
+```js
+const request = require('request')
+const template = {
+	firstName: 'name.firstName',
+	lastName: 'name.lastName',
+	ipAddresses: 'internet.ip|2'
+}
+request.post({url: 'https://jaymock.now.sh', json: template}, (error, response, body) => {
+    if (error) {
+        /* Handle error */
+        console.error(error)
+    }
+    console.log(body)
+    /*
+        {
+            firstName: 'Kaley',
+            lastName: 'Muller',
+            ipAddresses: [ '118.171.253.32', '193.234.186.225' ]
+        }
+    */
+})
+```
+
 ## Development
 
 First, clone the repository and install its dependencies:
