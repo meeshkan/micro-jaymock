@@ -43,7 +43,7 @@
 ]
 ```
 
-#### Using [request](https://github.com/request/request) (Node.js)
+#### Using [request](https://github.com/request/request) (Node.js):
 ```js
 const request = require('request')
 const template = {
