@@ -5,7 +5,16 @@
   "main": "index.ts",
   "scripts": {
     "dev": "micro-dev local/index.ts",
-    "test": "ava"
+    "test": "tsc && ava"
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
   },
   "repository": {
     "type": "git",
