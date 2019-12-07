@@ -4,7 +4,8 @@
   "description": "Tiny API mocking microservice, using jaymock.",
   "main": "index.ts",
   "scripts": {
-    "dev": "micro-dev local/index.ts"
+    "dev": "micro-dev local/index.ts",
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@types/micro": "^7.3.3",
     "@types/node": "^12.12.7",
+    "ava": "^2.4.0",
     "micro-dev": "^3.0.0",
     "ts-node": "^8.5.0",
     "typescript": "^3.7.2"
