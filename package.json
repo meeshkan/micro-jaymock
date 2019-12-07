@@ -36,7 +36,9 @@
     "@types/micro": "^7.3.3",
     "@types/node": "^12.12.7",
     "ava": "^2.4.0",
+    "freddo": "^1.1.2",
     "micro-dev": "^3.0.0",
+    "test-listen": "^1.1.0",
     "ts-node": "^8.5.0",
     "typescript": "^3.7.2"
   }
