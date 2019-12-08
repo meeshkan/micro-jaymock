@@ -6,13 +6,13 @@ import testListen from 'test-listen'
 import m from '.'
 
 const template = {
-    name: 'fake({{name.lastName}}, {{name.firstName}} {{name.suffix}})',
-    ssn: 'chance.ssn',
-    knownAddresses: {
-        street: 'address.streetAddress',
-        city: 'address.city',
-        zipCode: 'address.zipCode',
-        _repeat: 2
+	name: 'fake({{name.lastName}}, {{name.firstName}} {{name.suffix}})',
+	ssn: 'chance.ssn',
+	knownAddresses: {
+		street: 'address.streetAddress',
+		city: 'address.city',
+		zipCode: 'address.zipCode',
+		_repeat: 2
 	},
 	ipAddresses: 'internet.ip|3'
 }
