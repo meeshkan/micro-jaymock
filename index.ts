@@ -1,10 +1,10 @@
 import {IncomingMessage, ServerResponse} from 'http'
+import {join} from 'path'
+import {readFileSync} from 'fs'
+import jaymock from '@unmock/jaymock'
 import {json, send} from 'micro'
-const {join} = require('path')
-const {readFileSync} = require('fs')
-const jaymock = require('@unmock/jaymock')
-const chance = require('chance')
-const serveMarked = require('serve-marked')
+import chance from 'chance'
+import serveMarked from 'serve-marked'
 
 const jm = jaymock()
 jm.extend('chance', new chance())
