@@ -26,6 +26,8 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
 		switch (req.url) {
 			case '/':
 				return serveReadme(req, res)
+			case '/demo.gif':
+				return readFileSync(join(__dirname, 'demo.gif'))
 			case '/favicon.ico':
 				return ''
 			default:
