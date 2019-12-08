@@ -5,7 +5,10 @@
   "main": "index.ts",
   "scripts": {
     "dev": "micro-dev local/index.ts",
-    "test": "xo && tsc && ava"
+    "test": "xo && tsc && ava",
+    "coverage": "nyc npm test",
+    "coverage:upload": "nyc report --reporter=lcov && codecov",
+    "coverage:check": "nyc report && nyc check-coverage --lines 90 --functions 90 --branches 85"
   },
   "files": [
     "index.ts"
@@ -58,10 +61,12 @@
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "ava": "^2.4.0",
+    "codecov": "^3.6.1",
     "eslint-config-xo-typescript": "^0.23.0",
     "freddo": "^1.1.2",
     "got": "^10.0.2",
     "micro-dev": "^3.0.0",
+    "nyc": "^14.1.1",
     "test-listen": "^1.1.0",
     "ts-node": "^8.5.0",
     "typescript": "^3.7.2",
