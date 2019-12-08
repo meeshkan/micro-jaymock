@@ -1,5 +1,7 @@
 # micro-jaymock
 
+[![CircleCI](https://img.shields.io/circleci/build/github/unmock/micro-jaymock?style=for-the-badge)](https://circleci.com/gh/unmock/micro-jaymock) [![Codecov](https://img.shields.io/codecov/c/github/unmock/micro-jaymock?style=for-the-badge)](https://codecov.io/gh/unmock/micro-jaymock)
+
 > Tiny API mocking microservice for generating fake JSON data.
 
 <img src="demo.gif" width="800">
