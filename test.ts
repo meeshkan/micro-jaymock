@@ -80,5 +80,17 @@ test('valid GET request', async t => {
 		.body((body: string) => isGIF(Buffer.from(body, 'utf8')))
 		.ensure()
 
+	await freddo(`${url}/favicon.ico`)
+		.status(200)
+		.header('content-length', 0)
+		.body('')
+		.ensure()
+
+	await freddo(`${url}/xyz`)
+		.status(200)
+		.header('content-length', 17)
+		.body('Use POST request.')
+		.ensure()
+
 	t.pass()
 })
