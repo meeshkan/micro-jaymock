@@ -13,8 +13,7 @@
 ### Examples
 
 #### Using `curl`:
-
-```
+```bash
 ~ ❯❯❯ curl -X POST \
         -d '{ "firstName": "name.firstName", "lastName": "name.lastName" }' \
         https://jaymock.now.sh
@@ -22,7 +21,7 @@
 ```
 
 #### Using [`httpie`](https://github.com/jakubroztocil/httpie):
-```
+```bash
 ~ ❯❯❯ http -b POST https://jaymock.now.sh \
         firstName=name.firstName lastName=name.lastName ssn=chance.ssn \
         _repeat:=3
@@ -150,14 +149,14 @@ print(json.dumps(parsedFakeData, indent=4, sort_keys=True))
 ## Development
 
 First, clone the repository and install its dependencies:
-```
+```bash
 ~ ❯❯❯ git clone https://github.com/unmock/micro-jaymock.git
 ~ ❯❯❯ cd micro-jaymock/
 ~/micro-jaymock ❯❯❯ npm install
 ```
 
 Subsequently, start the development server:
-```
+```bash
 ~/micro-jaymock ❯❯❯ npm run dev
 ```
 You can then access the service by navigating to [`localhost:3000`](http://localhost:3000).
@@ -169,12 +168,12 @@ You can then access the service by navigating to [`localhost:3000`](http://local
 Alternatively, to deploy `micro-jaymock` manually:
 
 First, [download `now`](https://zeit.co/download):
-```
+```bash
 ~ ❯❯❯ npm install -g now
 ```
 
 Then, run `now` from *within* the `micro-jaymock` directory:
-```
+```bash
 ~/micro-jaymock ❯❯❯ now
 ```
 

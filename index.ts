@@ -18,7 +18,11 @@ const serveReadme = serveMarked(readFileSync(join(__dirname, 'readme.md')).toStr
 			line-height: 20px;
 			height: 20px;
 		}
-	`
+	`,
+	beforeHeadEnd: '<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github-gist.min.css" rel="stylesheet" />',
+	beforeBodyEnd:
+		'<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>' +
+		'<script>hljs.initHighlightingOnLoad();</script>'
 })
 
 export default async (req: IncomingMessage, res: ServerResponse): Promise<any> => {
