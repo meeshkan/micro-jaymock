@@ -68,6 +68,7 @@
     "ava": "^2.4.0",
     "codecov": "^3.6.1",
     "eslint-config-xo-typescript": "^0.23.0",
+    "file-type": "^12.4.0",
     "freddo": "^1.1.2",
     "got": "^10.0.2",
     "micro-dev": "^3.0.0",

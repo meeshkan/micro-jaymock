@@ -3,6 +3,7 @@ import {freddo, expr, exists} from 'freddo'
 import got from 'got'
 import micro from 'micro'
 import testListen from 'test-listen'
+import fileType from 'file-type'
 import m from '.'
 
 const template = {
@@ -22,6 +23,12 @@ const invalidTemplate = {
 }
 
 let url: string
+
+const isHTML = (str: string): boolean => str.trim().startsWith('<!DOCTYPE html>')
+const isGIF = (input: Buffer | Uint8Array): boolean => {
+	const match = fileType(input)
+	return match ? match.ext === 'gif' : false
+}
 
 test.before(async () => {
 	url = await testListen(micro(m))
@@ -62,11 +69,15 @@ test('invalid POST body', async t => {
 	})
 })
 
-const isHTML = (body: string): boolean => body.startsWith('<!DOCTYPE html>')
 test('valid GET request', async t => {
 	await freddo(url)
 		.status(200)
 		.body(isHTML)
+		.ensure()
+
+	await freddo(`${url}/demo.gif`)
+		.status(200)
+		.body((body: string) => isGIF(Buffer.from(body, 'utf8')))
 		.ensure()
 
 	t.pass()
