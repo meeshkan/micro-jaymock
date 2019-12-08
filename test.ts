@@ -21,7 +21,7 @@ const invalidTemplate = {
 	name: 'thisFunctionDoesNotExist'
 }
 
-let url
+let url: string
 
 test.before(async () => {
 	url = await testListen(micro(m))
@@ -46,7 +46,7 @@ test('valid POST request', async t => {
 		.body(exists, expr('.knownAddresses[1].city'))
 		.body(exists, expr('.knownAddresses[1].zipCode'))
 		.body(exists, expr('.ipAddresses'))
-		.body(ipAddresses => ipAddresses.length === 3, expr('.ipAddresses'))
+		.body((ipAddresses: string[]) => ipAddresses.length === 3, expr('.ipAddresses'))
 		.ensure()
 
 	t.pass()
@@ -62,7 +62,7 @@ test('invalid POST body', async t => {
 	})
 })
 
-const isHTML = body => body.startsWith('<!DOCTYPE html>')
+const isHTML = (body: string): boolean => body.startsWith('<!DOCTYPE html>')
 test('valid GET request', async t => {
 	await freddo(url)
 		.status(200)
