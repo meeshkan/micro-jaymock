@@ -1,2 +1,2 @@
-require('ts-node').register({ transpileOnly: true })
-module.exports = require('../index')
+require('ts-node').register({transpileOnly: true})
+module.exports = require('..')

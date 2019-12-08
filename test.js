@@ -1,5 +1,5 @@
 import test from 'ava'
-import { freddo, expr, exists } from 'freddo'
+import {freddo, expr, exists} from 'freddo'
 import got from 'got'
 import micro from 'micro'
 import testListen from 'test-listen'
@@ -46,9 +46,9 @@ test('valid POST request', async t => {
 		.body(exists, expr('.knownAddresses[1].city'))
 		.body(exists, expr('.knownAddresses[1].zipCode'))
 		.body(exists, expr('.ipAddresses'))
-		.body((ipAddresses) => ipAddresses.length === 3, expr('.ipAddresses'))
+		.body(ipAddresses => ipAddresses.length === 3, expr('.ipAddresses'))
 		.ensure()
-	
+
 	t.pass()
 })
 
@@ -68,6 +68,6 @@ test('valid GET request', async t => {
 		.status(200)
 		.body(isHTML)
 		.ensure()
-	
+
 	t.pass()
 })
