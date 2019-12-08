@@ -33,7 +33,7 @@ export default async (req: IncomingMessage, res: ServerResponse): Promise<any> =
 			default:
 				return 'Use POST request.'
 		}
-    }
+	}
 
 	try {
 		send(res, 200, jm.populate(await json(req)))
