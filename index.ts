@@ -21,7 +21,7 @@ const serveReadme = serveMarked(readFileSync(join(__dirname, 'readme.md')).toStr
 	`
 })
 
-export default async (req: IncomingMessage, res: ServerResponse) => {
+export default async (req: IncomingMessage, res: ServerResponse): Promise<any> => {
 	if (req.method === 'GET') {
 		switch (req.url) {
 			case '/':
