@@ -13,6 +13,9 @@
   "files": [
     "index.ts"
   ],
+  "engines": {
+    "node": "12.x"
+  },
   "xo": {
     "extends": "xo-typescript",
     "extensions": [
