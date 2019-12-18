@@ -4,6 +4,7 @@ import got from 'got'
 import micro from 'micro'
 import testListen from 'test-listen'
 import fileType from 'file-type'
+import isPNG from 'is-png'
 import m from '.'
 
 const template = {
@@ -80,10 +81,9 @@ test('valid GET request', async t => {
 		.body((body: string) => isGIF(Buffer.from(body, 'utf8')))
 		.ensure()
 
-	await freddo(`${url}/favicon.ico`)
+	await freddo(`${url}/favicon.png`, {encoding: null})
 		.status(200)
-		.header('content-length', 0)
-		.body('')
+		.body((body: string) => isPNG(Buffer.from(body)))
 		.ensure()
 
 	await freddo(`${url}/xyz`)

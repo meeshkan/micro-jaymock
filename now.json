@@ -7,6 +7,10 @@
             "use": "@now/static" 
         },
         {
+            "src": "*.png",
+            "use": "@now/static"
+        },
+        {
             "src": "index.ts",
             "use": "@now/node@canary"
         }

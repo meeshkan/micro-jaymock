@@ -9,6 +9,8 @@ import serveMarked from 'serve-marked'
 const jm = jaymock()
 jm.extend('chance', new chance())
 
+const readFile = (name: string): Buffer => readFileSync(join(__dirname, name))
+
 const serveReadme = serveMarked(readFileSync(join(__dirname, 'readme.md')).toString('utf8'), {
 	title: 'jaymock',
 	inlineCSS: `
@@ -19,7 +21,9 @@ const serveReadme = serveMarked(readFileSync(join(__dirname, 'readme.md')).toStr
 			height: 20px;
 		}
 	`,
-	beforeHeadEnd: '<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github-gist.min.css" rel="stylesheet" />',
+	beforeHeadEnd:
+		'<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github-gist.min.css" rel="stylesheet" />' +
+		'<link rel="icon" href="/favicon.png" sizes="32x32" />',
 	beforeBodyEnd:
 		'<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>' +
 		'<script>hljs.initHighlightingOnLoad();</script>'
@@ -31,9 +35,9 @@ export default async (req: IncomingMessage, res: ServerResponse): Promise<any> =
 			case '/':
 				return serveReadme(req, res)
 			case '/demo.gif':
-				return readFileSync(join(__dirname, 'demo.gif'))
-			case '/favicon.ico':
-				return ''
+				return readFile('demo.gif')
+			case '/favicon.png':
+				return readFile('favicon.png')
 			default:
 				return 'Use POST request.'
 		}
