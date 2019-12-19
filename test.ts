@@ -3,8 +3,7 @@ import {freddo, expr, exists} from 'freddo'
 import got from 'got'
 import micro from 'micro'
 import testListen from 'test-listen'
-import fileType from 'file-type'
-import isPNG from 'is-png'
+import imageType from 'image-type'
 import m from '.'
 
 const template = {
@@ -26,9 +25,13 @@ const invalidTemplate = {
 let url: string
 
 const isHTML = (str: string): boolean => str.trim().startsWith('<!DOCTYPE html>')
-const isGIF = (input: Buffer | Uint8Array): boolean => {
-	const match = fileType(input)
-	return match ? match.ext === 'gif' : false
+const isImage = (input: Buffer | Uint8Array, type: string): boolean => {
+	const image = imageType(input)
+	if (!image) {
+		return false
+	}
+
+	return image.ext === type
 }
 
 test.before(async () => {
@@ -78,12 +81,12 @@ test('valid GET request', async t => {
 
 	await freddo(`${url}/demo.gif`)
 		.status(200)
-		.body((body: string) => isGIF(Buffer.from(body, 'utf8')))
+		.body((body: string) => isImage(Buffer.from(body, 'utf8'), 'gif'))
 		.ensure()
 
 	await freddo(`${url}/favicon.png`, {encoding: null})
 		.status(200)
-		.body((body: string) => isPNG(Buffer.from(body)))
+		.body((body: string) => isImage(Buffer.from(body), 'png'))
 		.ensure()
 
 	await freddo(`${url}/xyz`)
