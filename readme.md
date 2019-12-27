@@ -161,6 +161,8 @@ Subsequently, start the development server:
 ```
 You can then access the service by navigating to [`localhost:3000`](http://localhost:3000).
 
+Alternatively, you can download [`jaymock-cli`](https://github.com/unmock/jaymock-cli) (by running `~ ❯❯❯ npm i -g jaymock-cli`), which allows you to run the development server and, consequently, mock a fake API 'globally' (by simply executing `~ ❯❯❯ jaymock --server`).
+
 ## Deployment
 
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/unmock/micro-jaymock)
