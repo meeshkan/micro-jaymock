@@ -49,14 +49,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/unmock/jaymock-microservice.git"
+    "url": "git+https://github.com/unmock/micro-jaymock.git"
   },
   "author": "unmock",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/unmock/jaymock-microservice/issues"
+    "url": "https://github.com/unmock/micro-jaymock/issues"
   },
-  "homepage": "https://github.com/unmock/jaymock-microservice#readme",
+  "homepage": "https://github.com/unmock/micro-jaymock#readme",
   "dependencies": {
     "@unmock/jaymock": "^1.0.8",
     "chance": "^1.1.3",
