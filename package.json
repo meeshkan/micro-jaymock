@@ -12,7 +12,8 @@
   },
   "files": [
     "index.ts",
-    "local/index.ts"
+    "local/index.ts",
+    "tsconfig.json"
   ],
   "engines": {
     "node": "12.x"
