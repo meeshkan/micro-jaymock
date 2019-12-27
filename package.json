@@ -11,7 +11,8 @@
     "coverage:check": "nyc report && nyc check-coverage --lines 100 --functions 100 --branches 100"
   },
   "files": [
-    "index.ts"
+    "index.ts",
+    "local/index.ts"
   ],
   "engines": {
     "node": "12.x"
