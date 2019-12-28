@@ -182,7 +182,7 @@ Then, run `now` from *within* the `micro-jaymock` directory:
 ## Related
 
 - [jaymock](https://github.com/unmock/jaymock) - API for this module
-- [jaymock-cli](https://github.com/unmock/jaymock-cli) - Generate fake JSON test data, right from the terminal
+- [jaymock-cli](https://github.com/unmock/jaymock-cli) - Mock an API and generate fake JSON test data, right from the terminal
 
 ## Contributing
 
