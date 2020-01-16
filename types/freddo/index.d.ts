@@ -1,1 +1,1 @@
-declare module 'freddo';
+declare module '@meeshkanml/freddo';

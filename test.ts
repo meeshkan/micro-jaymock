@@ -1,5 +1,5 @@
 import test from 'ava'
-import {freddo, expr, exists} from 'freddo'
+import {freddo, expr, exists} from '@meeshkanml/freddo'
 import got from 'got'
 import micro from 'micro'
 import testListen from 'test-listen'
