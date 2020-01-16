@@ -1,6 +1,6 @@
 # micro-jaymock
 
-[![CircleCI](https://img.shields.io/circleci/build/github/unmock/micro-jaymock?style=for-the-badge)](https://circleci.com/gh/unmock/micro-jaymock) [![XO](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=for-the-badge)](https://github.com/xojs/xo) [![Codecov](https://img.shields.io/codecov/c/github/unmock/micro-jaymock?style=for-the-badge)](https://codecov.io/gh/unmock/micro-jaymock)
+[![CircleCI](https://img.shields.io/circleci/build/github/Meeshkan/micro-jaymock?style=for-the-badge)](https://circleci.com/gh/Meeshkan/micro-jaymock) [![XO](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=for-the-badge)](https://github.com/xojs/xo) [![Codecov](https://img.shields.io/codecov/c/github/Meeshkan/micro-jaymock?style=for-the-badge)](https://codecov.io/gh/Meeshkan/micro-jaymock)
 
 > Tiny API mocking microservice for generating fake JSON data.
 
@@ -8,7 +8,7 @@
 
 ## Usage
 
-- Send a `POST` request to [`https://jaymock.now.sh/`](https://jaymock.now.sh) (or [`https://micro-jaymock.now.sh/`](https://micro-jaymock.now.sh)) with your JSON template (see [`jaymock.populate`'s `template` parameter](https://github.com/unmock/jaymock#populatetemplate)) as your request's `body`.
+- Send a `POST` request to [`https://jaymock.now.sh/`](https://jaymock.now.sh) (or [`https://micro-jaymock.now.sh/`](https://micro-jaymock.now.sh)) with your JSON template (see [`jaymock.populate`'s `template` parameter](https://github.com/Meeshkan/jaymock#populatetemplate)) as your request's `body`.
 
 ### Examples
 
@@ -150,7 +150,7 @@ print(json.dumps(parsedFakeData, indent=4, sort_keys=True))
 
 First, clone the repository and install its dependencies:
 ```bash
-~ ❯❯❯ git clone https://github.com/unmock/micro-jaymock.git
+~ ❯❯❯ git clone https://github.com/Meeshkan/micro-jaymock.git
 ~ ❯❯❯ cd micro-jaymock/
 ~/micro-jaymock ❯❯❯ npm install
 ```
@@ -161,11 +161,11 @@ Subsequently, start the development server:
 ```
 You can then access the service by navigating to [`localhost:3000`](http://localhost:3000).
 
-Alternatively, you can download [`jaymock-cli`](https://github.com/unmock/jaymock-cli) (by running `~ ❯❯❯ npm i -g jaymock-cli`), which allows you to run the development server and, consequently, mock a fake API 'globally' (by simply executing `~ ❯❯❯ jaymock --server`).
+Alternatively, you can download [`jaymock-cli`](https://github.com/Meeshkan/jaymock-cli) (by running `~ ❯❯❯ npm i -g jaymock-cli`), which allows you to run the development server and, consequently, mock a fake API 'globally' (by simply executing `~ ❯❯❯ jaymock --server`).
 
 ## Deployment
 
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/unmock/micro-jaymock)
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/Meeshkan/micro-jaymock)
 
 Alternatively, to deploy `micro-jaymock` manually:
 
@@ -181,8 +181,8 @@ Then, run `now` from *within* the `micro-jaymock` directory:
 
 ## Related
 
-- [jaymock](https://github.com/unmock/jaymock) - API for this module
-- [jaymock-cli](https://github.com/unmock/jaymock-cli) - Mock an API and generate fake JSON test data, right from the terminal
+- [jaymock](https://github.com/Meeshkan/jaymock) - API for this module
+- [jaymock-cli](https://github.com/Meeshkan/jaymock-cli) - Mock an API and generate fake JSON test data, right from the terminal
 
 ## Contributing
 
@@ -190,12 +190,12 @@ Thanks for wanting to contribute! We will soon have a contributing page
 detailing how to contribute. Meanwhile, feel free to star this repository, open issues,
 and ask for more features and support.
 
-Please note that this project is governed by the [Unmock Community Code of Conduct](https://github.com/unmock/code-of-conduct). By participating in this project, you agree to abide by its terms.
+Please note that this project is governed by the [Meeshkan Community Code of Conduct](https://github.com/unmock/code-of-conduct). By participating in this project, you agree to abide by its terms.
 
 ## Credits
 
-- [`Faker.js`](https://github.com/Marak/Faker.js) is used as [`jaymock`](https://github.com/unmock/jaymock)'s core fake data generator.
-- [`chance`](https://github.com/chancejs/chancejs) is imported as a fake data generator dependency (using [`jaymock.extend`](https://github.com/unmock/jaymock#extendname-body)).
+- [`Faker.js`](https://github.com/Marak/Faker.js) is used as [`jaymock`](https://github.com/Meeshkan/jaymock)'s core fake data generator.
+- [`chance`](https://github.com/chancejs/chancejs) is imported as a fake data generator dependency (using [`jaymock.extend`](https://github.com/Meeshkan/jaymock#extendname-body)).
 - [`micro`](https://github.com/zeit/micro) is used to serve this HTTP microservice.
 
 ## License

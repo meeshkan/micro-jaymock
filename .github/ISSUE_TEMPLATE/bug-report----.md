@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-<!-- If you have any questions while filling out this issue template, please feel free to reach out to us through the [Unmock Community Gitter](https://gitter.im/unmock/community) -->
+<!-- If you have any questions while filling out this issue template, please feel free to reach out to us through the [Meeshkan Community Gitter](https://gitter.im/unmock/community) -->
 
 ### Description
 

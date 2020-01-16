@@ -2,7 +2,7 @@
   Thanks for making a pull request! 
   
   Before submitting, please read our contributing guidelines:
-  https://github.com/unmock/jaymock#contributing
+  https://github.com/Meeshkan/jaymock#contributing
 
   Have any questions? 
   Feel free to ask in this PR and one of our maintainers will be happy to help 🙌
