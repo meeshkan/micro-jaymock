@@ -77,7 +77,7 @@
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "ava": "^2.4.0",
-    "codecov": "^3.6.1",
+    "codecov": "^3.6.5",
     "eslint-config-xo-typescript": "^0.23.0",
     "got": "^10.0.2",
     "image-type": "^4.1.0",
