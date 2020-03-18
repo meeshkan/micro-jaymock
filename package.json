@@ -43,7 +43,9 @@
     ]
   },
   "ava": {
-    "compileEnhancements": false,
+    "babel": {
+      "compileEnhancements": false
+    },
     "extensions": [
       "ts"
     ],
@@ -68,21 +70,22 @@
     "micro-dev": "^3.0.0",
     "serve-marked": "^2.0.2",
     "ts-node": "^8.5.4",
-    "typescript": "^3.7.4"
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
+    "@ava/babel": "^1.0.1",
     "@meeshkanml/freddo": "^1.2.2",
     "@types/micro": "^7.3.3",
-    "@types/node": "^12.12.7",
-    "@typescript-eslint/eslint-plugin": "^2.10.0",
-    "@typescript-eslint/parser": "^2.10.0",
-    "ava": "^2.4.0",
+    "@types/node": "^12.12.30",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "ava": "^3.5.0",
     "codecov": "^3.6.5",
     "eslint-config-xo-typescript": "^0.23.0",
-    "got": "^10.0.2",
+    "got": "^10.6.0",
     "image-type": "^4.1.0",
     "nyc": "^15.0.0-beta.2",
     "test-listen": "^1.1.0",
-    "xo": "^0.25.3"
+    "xo": "^0.25.4"
   }
 }
