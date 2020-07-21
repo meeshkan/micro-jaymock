@@ -80,7 +80,7 @@
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
     "ava": "^3.5.0",
-    "codecov": "^3.6.5",
+    "codecov": "^3.7.1",
     "eslint-config-xo-typescript": "^0.23.0",
     "got": "^10.6.0",
     "image-type": "^4.1.0",
