@@ -84,7 +84,7 @@
     "eslint-config-xo-typescript": "^0.23.0",
     "got": "^10.6.0",
     "image-type": "^4.1.0",
-    "nyc": "^15.0.0-beta.2",
+    "nyc": "^15.1.0",
     "test-listen": "^1.1.0",
     "xo": "^0.25.4"
   }
